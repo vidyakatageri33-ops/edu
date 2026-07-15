@@ -1,0 +1,21 @@
+const UnderlineSVG = () => {
+  return (
+    <svg
+      width="248"
+      height="11"
+      viewBox="0 0 248 11"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-full h-auto"
+    >
+      <path
+        d="M0 6C40 2 80 9 120 6C160 3 200 9 248 5"
+        stroke="#FFD700"
+        strokeWidth="8"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+};
+
+export default UnderlineSVG;

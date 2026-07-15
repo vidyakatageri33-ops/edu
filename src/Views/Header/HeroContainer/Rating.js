@@ -1,7 +1,7 @@
 import profile1 from "../../../Assets/9.png";
 import profile2 from "../../../Assets/13.png";
 import profile3 from "../../../Assets/10.png";
-import FloatingImage from "./FloatingImages/floatingImage";
+
 
 const Rating = () => {
   return (

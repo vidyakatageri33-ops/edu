@@ -1,21 +1,14 @@
 const FloatingImage = ({ image, className = "" }) => {
   return (
-    <img
-      src={image}
-      alt="Student"
-      className={`
-        w-12 h-12
-        bg-gray-100
-        sm:w-14 sm:h-14
-        md:w-16 md:h-16
-        lg:w-[80px] lg:h-[80px]
-        rounded-full
-        object-cover
-
-        ${className}
-      `}
-    />
+    <div
+     className={`absolute z-20 w-[48px] h-[48px] sm:w-[56px] sm:h-[56px] md:w-[68px] md:h-[68px] lg:w-[80px] lg:h-[80px] rounded-full overflow-hidden border-[3px] lg:border-[4px] border-white bg-[#E9E9E9] shadow-[0_20px_60px_rgba(0,0,0,0.12)] ${className}`}
+    >
+      <img
+        src={image}
+        alt="student"
+        className="w-full h-full object-cover"
+      />
+    </div>
   );
 };
-
-export default FloatingImage;
+export default FloatingImage

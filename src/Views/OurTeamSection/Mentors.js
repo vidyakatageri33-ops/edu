@@ -1,7 +1,7 @@
-import img1 from "../../Assets/16.png";
-import img2 from "../../Assets/15.png";
-import img3 from "../../Assets/14.png";
-import img4 from "../../Assets/10.png";
+import img1 from "../../Assets/13.png";
+import img2 from "../../Assets/9.png";
+import img3 from "../../Assets/10.png";
+import img4 from "../../Assets/14.png";
 
 export const mentors = [
   {
@@ -11,6 +11,9 @@ export const mentors = [
     rating: "4.7",
     courses: "20 courses",
     image: img1,
+     bgColor: "bg-[#FFC800]", 
+
+
   },
   {
     id: 2,
@@ -19,6 +22,7 @@ export const mentors = [
     rating: "4.7",
     courses: "20 courses",
     image: img2,
+     bgColor: "bg-[#FF3030]",
   },
   {
     id: 3,
@@ -27,6 +31,8 @@ export const mentors = [
     rating: "4.7",
     courses: "20 courses",
     image: img3,
+     bgColor: "bg-[#1BA5EA]", 
+
   },
   {
     id: 4,
@@ -35,5 +41,7 @@ export const mentors = [
     rating: "4.7",
     courses: "20 courses",
     image: img4,
+     bgColor: "bg-[#28E79E]"
   },
 ];
+
