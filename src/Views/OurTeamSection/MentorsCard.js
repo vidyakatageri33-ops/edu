@@ -1,46 +1,37 @@
-const MentorCard = ({ mentor }) => {
+import Button from "../../Components/Button";
+import Rating from "../Header/HeroContainer/Rating";
+
+const HeroContent = () => {
   return (
-    <div className="w-full max-w-[480px] min-h-[168px] bg-white rounded-[24px] shadow-[0px_0px_60px_0px_rgba(0,0,0,0.06)] p-4 sm:p-5 lg:p-6 flex items-center gap-4 sm:gap-5 lg:gap-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0px_10px_70px_0px_rgba(0,0,0,0.08)]">
-      
-    <div
-  className={`w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] lg:w-[120px] lg:h-[120px] rounded-full ${mentor.bgColor} flex items-center justify-center flex-shrink-0`}
->
-  <img
-    src={mentor.image}
-    alt={mentor.name}
-    className="w-full h-full rounded-full object-cover"
-  />
-</div>
+    <div className="relative z-30 w-full max-w-[779px] mx-auto flex flex-col items-center justify-center text-center px-4 py-6 sm:py-8 md:py-10 lg:py-0">
 
-      <div className="flex-1 min-w-0">
-      <div className="w-full max-w-[179px] flex flex-col gap-2">
-  <h3 className="font-sans font-bold text-[18px] sm:text-[20px] lg:text-[24px] leading-[100%] text-[#141219]">
-    {mentor.name}
-  </h3>
+      {/* Heading */}
+      <h1 className="font-sans font-bold text-[#141219] text-[30px] sm:text-[40px] md:text-[52px] lg:text-[64px] leading-[110%] lg:leading-[100%] max-w-[779px]">
+        Elevate Your Skills
+        <br />
+        with Expert-Led{" "}
+        <span className="relative inline-block">
+          Training
+        </span>
+      </h1>
 
-  <p className="font-sans font-normal text-[14px] sm:text-[15px] lg:text-[16px] leading-[100%] text-[#5C5C5C]">
-    {mentor.role}
-  </p>
-</div>
-
-      <div className="w-full max-w-[166px] h-[22px] flex items-center justify-between mt-4">
-  <div className="flex items-center gap-2">
-    <i className="bi bi-star-fill text-[#FFD700] text-sm"></i>
-    <span className="font-sans font-normal text-[14px] sm:text-[15px] lg:text-[16px] leading-[100%] text-[#141219]">
-      {mentor.rating}
-    </span>
-  </div>
-
-  <div className="flex items-center gap-2">
-    <i className="bi bi-play-circle text-[#5D38DE] text-sm"></i>
-    <span className="w-full max-w-[79px] font-sans font-normal text-[14px] sm:text-[15px] lg:text-[16px] leading-[100%] text-center text-[#141219]">
-      {mentor.courses}
-    </span>
-  </div>
-</div>
+      {/* Rating */}
+      <div className="mt-5 sm:mt-6 md:mt-7 lg:mt-8">
+        <Rating />
       </div>
+
+      {/* Button */}
+      <div className="mt-6 sm:mt-7 lg:mt-8">
+        <Button
+          name="Explore Courses"
+          bgColor="bg-[#5D38DE]"
+          textColor="text-white"
+          className="w-[170px] sm:w-[185px] lg:w-[197px] h-[48px] sm:h-[52px] lg:h-[56px] rounded-full text-[15px] sm:text-[16px] lg:text-[18px] font-bold transition-all duration-300 hover:bg-[#4C2BC5] hover:shadow-xl hover:scale-105 active:scale-95"
+        />
+      </div>
+
     </div>
   );
 };
 
-export default MentorCard;
+export default HeroContent;

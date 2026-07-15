@@ -1,60 +1,27 @@
 import Button from "../../../Components/Button";
 import Rating from "./Rating";
 
-
 const HeroContent = () => {
   return (
-    <div
-      className="
-        absolute
-        top-[20px]
-        left-1/2
-        -translate-x-1/2
-        z-30
+    <div className="relative z-30 flex flex-col items-center text-center w-full max-w-[779px] mx-auto">
 
-        flex
-        flex-col
-        items-center
-        text-center
-
-        w-full
-        max-w-[779px]
-      "
-    >
       {/* Heading */}
-      <h1
-        className="
-          font-sans
-          font-bold
-          text-[#141219]
-
-          text-[38px]
-          sm:text-[52px]
-          lg:text-[64px]
-
-          leading-[100%]
-          tracking-[0]
-
-          max-w-[779px]
-        "
-      >
+      <h1 className="font-sans font-bold text-[#141219] text-[34px] sm:text-[46px] md:text-[56px] lg:text-[64px] leading-[100%] max-w-[779px]">
         Elevate Your Skills
         <br />
-
         with Expert-Led{" "}
-
-        <span className="relative inline-block">
-          Training
-
-          {/* <div className="absolute left-0 -bottom-[8px] w-full">
-            <UnderlineSVG />
-          </div> */}
-        </span>
+      <span
+  className="relative inline-block after:content-[''] after:absolute after:left-0 after:-bottom-2
+after:w-full after:h-[5px] after:bg-[#FFD700] after:rounded-full after:rotate-[-2deg] after:opacity-90
+  "
+>
+  Training
+</span>
       </h1>
 
       {/* Rating */}
       <div className="mt-6">
-       <Rating/>
+        <Rating />
       </div>
 
       {/* Button */}
@@ -62,21 +29,9 @@ const HeroContent = () => {
         name="Explore Courses"
         bgColor="bg-[#5D38DE]"
         textColor="text-white"
-        className="
-          mt-8
-
-          w-[197px]
-          h-[56px]
-
-          rounded-[80px]
-
-          px-8
-          py-4
-
-          text-[18px]
-          font-bold
-        "
+        className="mt-8 w-[170px] sm:w-[185px] lg:w-[197px] h-[48px] sm:h-[52px] lg:h-[56px] rounded-full text-[16px] lg:text-[18px] font-bold"
       />
+
     </div>
   );
 };

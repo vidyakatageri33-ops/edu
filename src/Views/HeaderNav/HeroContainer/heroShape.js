@@ -21,7 +21,7 @@ const HeroShapes = () => {
       <div
         className="
           absolute
-          top-[220px]
+          top-[190px]
           right-[110px]
           z-10
           hidden lg:block

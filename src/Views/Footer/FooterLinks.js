@@ -1,49 +1,53 @@
-import { companyLinks,courseLinks } from "./FooterData";
-
-
+import { companyLinks, courseLinks } from "./FooterData";
 
 const FooterLinks = () => {
   return (
-    <div className="flex flex-col sm:flex-row gap-10 lg:gap-16">
-        <div className="flex flex-col gap-8 min-w-[190px]">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-12 md:gap-16 lg:gap-20">
 
-        <h3 className="font-sans font-bold text-[20px] lg:text-[24px] leading-[100%] text-white whitespace-nowrap">
+      {/* Company */}
+      <div className="min-w-[160px]">
+        <h3 className="text-[20px] md:text-[22px] lg:text-[24px] font-bold text-white mb-6 md:mb-8">
           Company
         </h3>
 
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-4 md:gap-5 lg:gap-6">
           {companyLinks.map((item, index) => (
             <a
               key={index}
               href="/"
-              className="font-sans font-normal text-[16px] lg:text-[18px] leading-[100%] text-white whitespace-nowrap hover:text-gray-200 transition-all duration-300"
+              className="group relative flex items-center w-fit text-[16px] lg:text-[18px] text-white transition-all duration-300 hover:text-[#FFD166]"
             >
-              {item}
+              <span className="transition-all duration-300 group-hover:translate-x-2">
+                {item}
+              </span>
+
+              <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#FFD166] transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
         </div>
-
       </div>
 
       {/* Courses */}
-      <div className="flex flex-col gap-8 min-w-[190px]">
-
-        <h3 className="font-sans font-bold text-[20px] lg:text-[24px] leading-[100%] text-white whitespace-nowrap">
+      <div className="min-w-[160px]">
+        <h3 className="text-[20px] md:text-[22px] lg:text-[24px] font-bold text-white mb-6 md:mb-8">
           Courses
         </h3>
 
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-4 md:gap-5 lg:gap-6">
           {courseLinks.map((item, index) => (
             <a
               key={index}
               href="/"
-              className="font-sans font-normal text-[16px] lg:text-[18px] leading-[100%] text-white whitespace-nowrap hover:text-gray-200 transition-all duration-300"
+              className="group relative flex items-center w-fit text-[16px] lg:text-[18px] text-white transition-all duration-300 hover:text-[#FFD166]"
             >
-              {item}
+              <span className="transition-all duration-300 group-hover:translate-x-2">
+                {item}
+              </span>
+
+              <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-[#FFD166] transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
         </div>
-
       </div>
 
     </div>

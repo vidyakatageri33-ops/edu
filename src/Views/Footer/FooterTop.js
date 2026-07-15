@@ -5,15 +5,24 @@ import FooterLogo from "./footerLogo";
 const FooterTop = () => {
   return (
     <section className="w-full">
-      <div className="w-full max-w-[1120px] mx-auto px-4 sm:px-6 lg:px-0 pt-10 sm:pt-12 lg:pt-16 pb-8 sm:pb-10 lg:pb-12">
+      <div className="max-w-[1120px] mx-auto px-4 sm:px-6 lg:px-0 py-10 lg:py-16">
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr] gap-8 sm:gap-10 lg:gap-16">
+        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-10 lg:gap-8">
 
-          <FooterLogo />
+          {/* Logo */}
+          <div className="w-full lg:max-w-[320px]">
+            <FooterLogo />
+          </div>
 
-          <FooterLinks />
+          {/* Links */}
+          <div className="w-full lg:flex-1 flex justify-start lg:justify-center">
+            <FooterLinks />
+          </div>
 
-          <DownloadApps />
+          {/* Download Apps */}
+          <div className="w-full lg:max-w-[220px] flex justify-start lg:justify-end">
+            <DownloadApps />
+          </div>
 
         </div>
 

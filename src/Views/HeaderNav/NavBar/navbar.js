@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "../../../Assets/Vector.png";
+import logo from "../../../Assets/logo1.png";
 import Button from "../../../Components/Button";
 import { navLinks } from "./navData";
 
@@ -12,9 +12,9 @@ const Navbar = () => {
       <div className="max-w-[1120px] h-[90px] lg:h-[120px] mx-auto px-4 sm:px-6 lg:px-0 flex items-center justify-between">
 
         {/* Logo */}
-        <div className="group flex items-center gap-[10px] cursor-pointer">
+        <div className="group flex items-center gap-[5px] cursor-pointer">
 
-          <div className="w-[36px] h-[36px] bg-[#5D38DE] rounded-md flex items-center justify-center shadow-md transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
+          <div className=" flex items-center justify-center shadow-md transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
 
             <img
               src={logo}
@@ -75,16 +75,22 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden text-[32px] text-[#141219] transition-all duration-300 hover:text-[#5D38DE] hover:scale-110"
-        >
-          <i
-            className={`bi ${
-              isOpen ? "bi-x-lg rotate-180" : "bi-list"
-            } transition-all duration-300`}
-          ></i>
-        </button>
+      <button
+  onClick={() => setIsOpen(!isOpen)}
+  className={`lg:hidden flex items-center justify-center w-11 h-11 rounded-full shadow-md border transition-all duration-300 ${
+    isOpen
+      ? "bg-[#5D38DE] border-[#5D38DE]"
+      : "bg-white border-[#E5E7EB] hover:bg-[#5D38DE] hover:border-[#5D38DE]"
+  }`}
+>
+  <i
+    className={`bi ${
+      isOpen ? "bi-x-lg rotate-180" : "bi-list"
+    } text-[22px] transition-all duration-300 ${
+      isOpen ? "text-white" : "text-[#141219] hover:text-white"
+    }`}
+  />
+</button>
 
       </div>
 
