@@ -8,33 +8,25 @@ const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white border-b border-[#0000001A]">
-
       <div className="max-w-[1120px] h-[90px] lg:h-[120px] mx-auto px-4 sm:px-6 lg:px-0 flex items-center justify-between">
-
         {/* Logo */}
         <div className="group flex items-center gap-[5px] cursor-pointer">
-
           <div className=" flex items-center justify-center shadow-md transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
-
             <img
               src={logo}
               alt="Sparkly"
               className="w-[20px] h-[30px] object-contain"
             />
-
           </div>
 
           <h1 className="font-bold text-[22px] sm:text-[24px] lg:text-[28px] text-[#141219] transition-colors duration-300 group-hover:text-[#5D38DE]">
             Sparkly
           </h1>
-
         </div>
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex items-center gap-10">
-
           <ul className="flex items-center gap-10">
-
             {navLinks.map((link) => (
               <li
                 key={link.id}
@@ -59,7 +51,6 @@ const Navbar = () => {
                 />
               </li>
             ))}
-
           </ul>
 
           {/* Vertical Divider */}
@@ -71,27 +62,25 @@ const Navbar = () => {
             textColor="text-white"
             className="w-[173px] h-[56px] rounded-full text-[18px] font-bold transition-all duration-300 hover:bg-[#4C2BC5] hover:scale-105 hover:shadow-xl active:scale-95"
           />
-
         </div>
 
         {/* Mobile Menu Button */}
-      <button
-  onClick={() => setIsOpen(!isOpen)}
-  className={`lg:hidden flex items-center justify-center w-11 h-11 rounded-full shadow-md border transition-all duration-300 ${
-    isOpen
-      ? "bg-[#5D38DE] border-[#5D38DE]"
-      : "bg-white border-[#E5E7EB] hover:bg-[#5D38DE] hover:border-[#5D38DE]"
-  }`}
->
-  <i
-    className={`bi ${
-      isOpen ? "bi-x-lg rotate-180" : "bi-list"
-    } text-[22px] transition-all duration-300 ${
-      isOpen ? "text-white" : "text-[#141219] hover:text-white"
-    }`}
-  />
-</button>
-
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className={`lg:hidden flex items-center justify-center w-11 h-11 rounded-full shadow-md border transition-all duration-300 ${
+            isOpen
+              ? "bg-[#5D38DE] border-[#5D38DE]"
+              : "bg-white border-[#E5E7EB] hover:bg-[#5D38DE] hover:border-[#5D38DE]"
+          }`}
+        >
+          <i
+            className={`bi ${
+              isOpen ? "bi-x-lg rotate-180" : "bi-list"
+            } text-[22px] transition-all duration-300 ${
+              isOpen ? "text-white" : "text-[#141219] hover:text-white"
+            }`}
+          />
+        </button>
       </div>
 
       {/* Mobile Menu */}
@@ -101,9 +90,7 @@ const Navbar = () => {
         }`}
       >
         <div className="bg-white shadow-xl px-6 py-6">
-
           <ul className="flex flex-col gap-6">
-
             {navLinks.map((link) => (
               <li
                 key={link.id}
@@ -117,7 +104,6 @@ const Navbar = () => {
                 )}
               </li>
             ))}
-
           </ul>
 
           <Button
@@ -126,10 +112,8 @@ const Navbar = () => {
             textColor="text-white"
             className="mt-8 w-full h-[52px] rounded-full text-[18px] font-bold transition-all duration-300 hover:bg-[#4C2BC5] hover:scale-[1.02] hover:shadow-lg active:scale-95"
           />
-
         </div>
       </div>
-
     </header>
   );
 };
